@@ -1,0 +1,248 @@
+﻿html {
+ font-size: 62.5%;
+}
+body{
+font-family: "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN,  "Noto Sans JP", "Yu Gothic", YuGothic, sans-serif,-apple-system, "メイリオ", Meiryo, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI";
+}
+img {
+ width: 100%;
+ height: auto; 
+}
+li {
+ list-style: none;
+}
+a{
+ text-decoration: none;
+}
+.db{
+ display: block;
+}
+.dn{
+ display: none;
+}
+.m0{
+ margin: 0 auto;
+}
+/*------------------------------------
+/*
+/*　ページトップボタン
+/*
+/*------------------------------------*/
+#page_top {
+ position: fixed;
+ bottom: 30px;
+ right: 20px;
+ width: 50px;
+ height: 50px;
+ background-color: #000;
+ text-align: center;
+ vertical-align: middle;
+ display: table;
+ border: 1px solid #fff;
+}
+#page_top a {
+  color: #fff;
+  font-size: 2.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  display: table-cell;
+  vertical-align: middle;
+}
+#page_top a:hover {
+  background-color: #666;
+  text-decoration: none;
+}
+/*------------------------------------
+/* タイトル
+/*------------------------------------*/
+.icon{  
+ position: relative;
+ top: 3px;
+ margin: -4px 4px 0 0;
+ width: 14.5%;
+}
+.title{
+ margin-right: 2vw;
+}
+/*------------------------------------
+/*
+/*　メイン
+/*
+/*------------------------------------*/
+/*------------------------------------
+/*　共通
+/*------------------------------------*/
+.ttl{
+  margin: 20px 0 64px;
+  font-size: 3vw;
+  text-align: center;
+  font-weight: bold;
+}
+.subttl{
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.txt{
+  font-size: 16px;
+}
+.s-fb{
+  display: flex;
+}
+.persona, .userflow, .contents, .design{
+  margin-top: 48px;
+}
+/*------------------------------------
+/*  全体
+/*------------------------------------*/
+.main-container{
+  font-feature-settings: "palt" 1;
+  padding: 100px 40px 64px;
+  margin: 0 auto;
+  max-width: 1400px;
+  background:rgb(226, 240, 217);
+}
+.txt-container{
+  width: 55%;
+}
+.s-img{
+  width:320px;
+  margin-right: 20px;
+}
+.qr{
+  width:50%;
+}
+.btn{
+  padding: 10px 20px;
+  font-size:  15px;
+  border-radius: 5px;
+  display: block;
+  margin: 40px auto;
+  text-decoration: none;
+  background:rgb(255, 255, 255);
+}
+.btn:hover{
+  color: #fff;
+  text-decoration: none;
+}
+/*------------------------
+/*  概要
+/*------------------------*/
+/*------------------------
+/*  ペルソナ
+/*------------------------*/
+.p-img{
+  width: 200px;
+}
+.p-name{
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+.p-txt{
+  font-weight: bold;
+  margin-top: 5px;
+  text-decoration: underline;
+}
+#utiwake dt{
+  display:block;
+  width:200px;
+  height:40px;
+  line-height:40px;
+  text-align:center;
+  border:#666 1px solid;
+  cursor:pointer;
+  background: rgb(255,255,255);
+  }
+#utiwake dd{
+  background:#f2f2f2;
+  width:200px;
+  height:310px;
+  line-height:25px;
+  text-align:left;
+  border:#666 1px solid;
+  display:none;
+  background: rgb(255,255,255);
+  }
+/*------------------------
+/*  ユーザーフロー
+/*------------------------*/
+.userflow img{
+  width: 60%;
+}
+/*------------------------
+/*  コンテンツ
+/*------------------------*/
+.contents{
+  width: 100%;
+}
+.contents img{
+  width: 100%;
+}
+/*------------------------
+/*  デザインアイデア
+/*------------------------*/
+.design .subttl:nth-of-type(2){
+  margin-top: 24px;
+  font-size: 15px;
+}
+.design .subttl:nth-last-child(2){
+  margin-top: 24px;
+  font-size: 15px;
+}
+/*------------------------------------
+/*
+/*  レスポンシブ
+/*
+/*------------------------------------*/
+@media screen and (max-width: 749px){
+ body{
+    max-width: 750px;
+    overflow-x: hidden;
+  }
+  .header, .qr{
+    display: none;
+  }
+  /*------------------------
+  /*  全体
+  /*------------------------*/
+  .main-container{
+    padding: 80px 24px 64px;
+    margin: 0 auto;
+    max-width: 1400px;
+  }
+  .ttl{
+    font-size: 3rem;
+  }
+  .txt-container{
+    width: 100%;
+  }
+  .s-fb{
+    display: block;
+  }
+  .s-img img{
+    margin: 0 -24px 64px;
+    width: 97.2vw;
+  }
+/*------------------------
+/*  ユーザーフロー
+/*------------------------*/
+  .userflow img{
+    width: 100%;
+    min-width: 350px;
+  }
+/*------------------------
+/*  コンテンツ
+/*------------------------*/
+.contents{
+  width: 100%;
+}
+.contents img{
+  width: 100%;
+  min-width: 350px;
+}
+
+
+
+}

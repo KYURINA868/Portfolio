@@ -1,0 +1,619 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>PortFolio</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+  <link rel="stylesheet" href="https://cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+  <link rel="stylesheet" href="https://cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+    integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+    integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+  <!-- メイン ------------------------------------------->
+  <div class="wrapper">
+    <!-- ナビ ------------------------------------------->
+    <nav class="global-nav">
+      <ul class="global-nav__list">
+        <li class="global-nav__item"><a class="global-nav__link" href="#TOP">TOP</a></li>
+        <li class="global-nav__item"><a class="global-nav__link" href="#works">WORKS</a></li>
+        <li class="global-nav__item"><a class="global-nav__link" href="#about">ABOUT</a></li>
+        <li class="global-nav__item"><a class="global-nav__link" href="#skill">SKILL</a></li>
+        <li class="global-nav__item"><a class="global-nav__link" href="#contact">CONTACT</a></li>
+      </ul>
+    </nav>
+    <main>
+      <!-- header --------------------------------------->
+      <div class="header" id="top">
+        <div class="hero-image">
+          <div class="hero-image__item"></div>
+          <img src="./img/header.png" alt="header" class="hero-img">
+        </div>
+      </div>
+      <!-- WORKS --------------------------------------->
+      <section class="works" id="works">
+        <div class="works-main">
+          <h2 class="ttl">WORKS</h2>
+          <!-- サイト/バナー切り替えボタン -->
+          <p class="link-fb link_btn">
+            <button type="button" class="work_btn btn btn-outline-secondary secList_s" id="link_s">SITE</button>
+            <button type="button" class="work_btn btn btn-outline-secondary" id="link_b">BANNER</button>
+          </p>
+          <!-- WORKS 1行目------------>
+          <div class="container" id="app">
+            <ul class="gallery wrk-fb link_s section_s">
+              <li class="gallery-item">
+                <div class="wrk_sp wrk_01">
+                  <div class="wrk_img">
+                    <a href="https://kyurinastudio.sakura.ne.jp/lanthanum_psycho/" class="link"> <img
+                        src="./img/wrk/lp.jpg" alt="lp1"></a>
+                  </div>
+                  <div class="wrk_txt-sp">
+                    <p class="wrk-txt">
+                      スクールの卒業作品です。映画をテーマに制作しています。<br>
+                      制作時間：２ヶ月
+                    </p>
+                    <p class="link-fb">
+                      <a href="./work/lp/index.html" class="link">
+                        <button type="button" class="work_btn btn btn-outline-secondary"> VIEW MORE</button>
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="gallery-item">
+                <div class="wrk_sp wrk_01">
+                  <div class="wrk_img">
+                    <a href="http://kyurinastudio.sakura.ne.jp/wagaya/index.html" class="link"> <img
+                        src="./img/wrk/insyoku.jpg" alt="lp3"></a>
+                  </div>
+                  <div class="wrk_txt-sp">
+                    <p class="wrk-txt">
+                      飲食店(ラーメン店)の仮想サイトです。
+                      昨今の情勢を踏まえて制作しています。<br>
+                      制作時間：３週間
+                    </p>
+                    <p class="link-fb">
+                      <a href="./work/insyoku/index.html" class="link">
+                        <button type="button" class="work_btn btn btn-outline-secondary"> VIEW MORE</button>
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="gallery-item">
+                <div class="wrk_sp wrk_01">
+                  <div class="wrk_img">
+                    <a href="./work/salon/index.html" class="link"> <img src="./img/wrk/biyou.jpg" alt="lp2"></a>
+                  </div>
+                  <div class="wrk_txt-sp">
+                    <p class="wrk-txt">ヘアサロンの仮想サイトです。
+                      マーケティングを意識して制作しています。(デザインのみ)<br>
+                      制作時間：２週間
+                    </p>
+                    <p class="link-fb">
+                      <a href="./work/salon/index.html" class="link">
+                        <button type="button" class="work_btn btn btn-outline-secondary"> VIEW MORE</button>
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <!-- WORKS 2行目------------>
+              <li class="gallery-item">
+                <div class="sp-fb">
+                  <div class="wrk_sp wrk_02">
+                    <div class="wrk_02_img">
+                      <a href="./img/wrk/kadai/kadai_05.jpg" @click.prevent="zoom" class="gallery-img">
+                        <img src="./img/wrk/kadai/kadai_05_s.jpg" alt="isara">
+                        <p class="gallery-item-hover">
+                          <i class="fas fa-search-plus"></i>
+                        </p>
+                      </a>
+                    </div>
+                    <div class="wrk_txt-sp">
+                      <p class="wrk-txt">
+                        スクール課題作品その５です。<br class="spdn">
+                        カメラのスクールサイトです。
+                      </p>
+                      <p class="img-btn">
+                        <a href="./img/wrk/kadai/kadai_05.jpg" @click.prevent="zoom" class="gallery-img">
+                          <button type="button" class="work_btn btn btn-outline-secondary"> VIEW IMAGE</button>
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="gallery-item">
+                <div class="wrk_sp wrk_02">
+                  <div class="wrk_02_img">
+                    <a href="./img/wrk/kadai/kadai_04.jpg" @click.prevent="zoom" class="gallery-img">
+                      <img src="./img/wrk/kadai/kadai_04_s.jpg" alt="isara">
+                      <p class="gallery-item-hover">
+                        <i class="fas fa-search-plus"></i>
+                      </p>
+                    </a>
+                  </div>
+                  <div class="wrk_txt-sp">
+                    <p class="wrk-txt">
+                      スクール課題作品その４です。<br class="spdn">
+                      ファッション・雑貨の紹介サイトです。
+                    </p>
+                    <p class="img-btn">
+                      <a href="./img/wrk/kadai/kadai_04.jpg" @click.prevent="zoom" class="gallery-img">
+                        <button type="button" class="work_btn btn btn-outline-secondary"> VIEW IMAGE</button>
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="gallery-item">
+                <div class="sp-fb">
+                  <div class="wrk_sp wrk_02">
+                    <div class="wrk_02_img">
+                      <a href="./img/wrk/kadai/kadai_03.jpg" @click.prevent="zoom" class="gallery-img">
+                        <img src="./img/wrk/kadai/kadai_03_s.jpg" alt="isara">
+                        <span class="gallery-item-hover">
+                          <i class="fas fa-search-plus"></i>
+                        </span>
+                      </a>
+                    </div>
+                    <div class="wrk_txt-sp">
+                      <p class="wrk-txt">
+                        スクール課題作品その３です。<br>
+                        講演会の宣伝サイトです。
+                      </p>
+                      <p class="img-btn">
+                        <a href="./img/wrk/kadai/kadai_03.jpg" @click.prevent="zoom" class="gallery-img">
+                          <button type="button" class="work_btn btn btn-outline-secondary"> VIEW IMAGE</button>
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+              </li>
+              <!-- WORKS 3行目------------>
+              <li class="gallery-item">
+                <div class="sp-fb">
+                  <div class="wrk_sp wrk_03">
+                    <div class="wrk_03_img">
+                      <a href="./img/wrk/kadai/kadai_02.jpg" @click.prevent="zoom" class="gallery-img">
+                        <img src="./img/wrk/kadai/kadai_02_s.jpg" alt="isara">
+                        <p class="gallery-item-hover">
+                          <i class="fas fa-search-plus"></i>
+                        </p>
+                      </a>
+                    </div>
+                    <div class="wrk_txt-sp">
+                      <p class="wrk-txt">
+                        スクール課題作品その２です。<br class="spdn">
+                        WEB制作会社の紹介です。
+                      </p>
+                      <p class="img-btn">
+                        <a href="./img/wrk/kadai/kadai_02.jpg" @click.prevent="zoom" class="gallery-img">
+                          <button type="button" class="work_btn btn btn-outline-secondary"> VIEW IMAGE</button>
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="gallery-item">
+                <div class="wrk_sp wrk_03">
+                  <div class="wrk_03_img">
+                    <a href="./img/wrk/kadai/kadai_01.jpg" @click.prevent="zoom" class="gallery-img">
+                      <img src="./img/wrk/kadai/kadai_01_s.jpg" alt="isara">
+                      <p class="gallery-item-hover">
+                        <i class="fas fa-search-plus"></i>
+                      </p>
+                    </a>
+                  </div>
+                  <div class="wrk_txt-sp">
+                    <p class="wrk-txt">
+                      スクール課題作品その１です。<br class="spdn">
+                      お天気アプリの紹介サイトです。
+                    </p>
+                    <p class="img-btn">
+                      <a href="./img/wrk/kadai/kadai_01.jpg" @click.prevent="zoom" class="gallery-img">
+                        <button type="button" class="work_btn btn btn-outline-secondary"> VIEW IMAGE</button>
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="gallery-item">
+                <div class="sp-fb">
+                  <div class="wrk_sp wrk_03">
+                    <div class="wrk_03_img">
+                      <a href="./img/wrk/isara_pc.jpg" @click.prevent="zoom" class="gallery-img">
+                        <img src="./img/wrk/isara_pc_s.jpg" alt="isara">
+                        <span class="gallery-item-hover">
+                          <i class="fas fa-search-plus"></i>
+                        </span>
+                      </a>
+                    </div>
+                    <div class="wrk_txt-sp">
+                      <p class="wrk-txt">
+                        iSara.life模写制作LP（<a href="https://isara.life/">元サイト</a>）<br>
+                        バンコクノマドエンジニア育成講座の模写制作です。<br>
+                        制作時間：３週間
+                      </p>
+                      <p class="img-btn">
+                        <a href="./img/wrk/isara_pc.jpg" @click.prevent="zoom" class="gallery-img">
+                          <button type="button" class="work_btn btn btn-outline-secondary"> VIEW IMAGE</button>
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <!-- モーダル画像 -->
+              <transition name="fade">
+                <div class="bg" @click.self="close" v-show="isShow">
+                  <transition name="slide" @after-leave="afterLeave">
+                    <div class="modal" v-show="isShow">
+                      <button class="modal-btn" @click="close">
+                        <i class="fas fa-times"></i>
+                      </button>
+                      <img :src="src" @click="close" alt="">
+                    </div>
+                  </transition>
+                </div>
+              </transition>
+            </ul>
+          </div>
+
+
+          <!-- バナー -->
+          <div class="container" id="app2">
+            <ul class="gallery wrk-fb link_b section_b">
+              <li class="gallery-item">
+                <div class="sp-fb">
+                  <div class="wrk_sp wrk_01">
+                    <div class="wrk_img">
+                      <a href=" ./img/banner/b_img08_info.jpg" @click.prevent="zoom" class="gallery-img">
+                        <img src=" ./img/banner/b_img08.jpg" alt="banner">
+                        <span class="gallery-item-hover">
+                          <i class="fas fa-search-plus"></i>
+                        </span>
+                      </a>
+                    </div>
+                    <div class="wrk_txt-sp">
+                      <p class="wrk-txt">
+                        カジュアルブランドの仮想広告バナーです。<br>
+                        １０〜２０代をターゲットにしています。<br>
+                        制作時間：１.５時間
+                      </p>
+                      <p class="img-btn">
+                        <a href="./img/banner/b_img08_info.jpg" @click.prevent="zoom" class="gallery-img">
+                          <button type="button" class="work_btn btn btn-outline-secondary"> VIEW IMAGE</button>
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="gallery-item">
+                <div class="sp-fb">
+                  <div class="wrk_sp wrk_01">
+                    <div class="wrk_img">
+                      <a href=" ./img/banner/b_img07_info.jpg" @click.prevent="zoom" class="gallery-img">
+                        <img src=" ./img/banner/b_img07.jpg" alt="banner">
+                        <span class="gallery-item-hover">
+                          <i class="fas fa-search-plus"></i>
+                        </span>
+                      </a>
+                    </div>
+                    <div class="wrk_txt-sp">
+                      <p class="wrk-txt">
+                        英会話教室の仮想バナーです。<br>
+                        30～40代社会人をターゲットにしています。<br>
+                        制作時間：３時間
+                      </p>
+                      <p class="img-btn">
+                        <a href="./img/banner/b_img07_info.jpg" @click.prevent="zoom" class="gallery-img">
+                          <button type="button" class="work_btn btn btn-outline-secondary"> VIEW IMAGE</button>
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="gallery-item">
+                <div class="sp-fb">
+                  <div class="wrk_sp wrk_01">
+                    <div class="wrk_img">
+                      <a href=" ./img/banner/b_img06_info.jpg" @click.prevent="zoom" class="gallery-img">
+                        <img src=" ./img/banner/b_img06.jpg" alt="banner" class="kou">
+                        <span class="gallery-item-hover">
+                          <i class="fas fa-search-plus"></i>
+                        </span>
+                      </a>
+                    </div>
+                    <div class="wrk_txt-sp">
+                      <p class="wrk-txt">
+                        夏期講習の仮想バナーです。<br>
+                        小～中学生と親をターゲットにしています。<br>
+                        制作時間：２.５時間
+                      </p>
+                      <p class="img-btn">
+                        <a href="./img/banner/b_img06_info.jpg" @click.prevent="zoom" class="gallery-img">
+                          <button type="button" class="work_btn btn btn-outline-secondary">VIEW IMAGE</button>
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="gallery-item">
+                <div class="sp-fb">
+                  <div class="wrk_sp wrk_01">
+                    <div class="wrk_img">
+                      <img src=" ./img/banner/b_img05.jpg" alt="banner">
+                    </div>
+                    <div class="wrk_txt-sp">
+                      <p class="wrk-txt">
+                        英会話スクールの広告バナーです。<br>
+                        隣のバナーを発展させました。<br>
+                        制作時間：２時間
+                      </p>
+                      <p class="img-btn">
+                        <a href="./img/banner/b_img05.jpg" @click.prevent="zoom" class="gallery-img">
+                          <button type="button" class="work_btn btn btn-outline-secondary"> VIEW IMAGE</button>
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="gallery-item">
+                <div class="sp-fb">
+                  <div class="wrk_sp wrk_01">
+                    <div class="wrk_img">
+                      <img src=" ./img/banner/b_img03.jpg" alt="banner">
+                    </div>
+                    <div class="wrk_txt-sp">
+                      <p class="wrk-txt">
+                        英会話スクールの仮想バナーです。<br>
+                        勉強を習い始めの時に作成。<br>
+                        制作時間：５時間
+                      </p>
+                      <p class="img-btn">
+                        <a href="./img/banner/b_img03.jpg" @click.prevent="zoom" class="gallery-img">
+                          <button type="button" class="work_btn btn btn-outline-secondary"> VIEW IMAGE</button>
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="gallery-item">
+                <div class="sp-fb">
+                  <div class="wrk_sp wrk_01">
+                    <div class="wrk_img">
+                      <img src=" ./img/banner/b_img04.jpg" alt="banner">
+                    </div>
+                    <div class="wrk_txt-sp">
+                      <p class="wrk-txt">
+                        介護職員募集のバナーです。<br>
+                        制作時間：４時間
+                      </p>
+                      <p class="img-btn">
+                        <a href="./img/banner/b_img04.jpg" @click.prevent="zoom" class="gallery-img">
+                          <button type="button" class="work_btn btn btn-outline-secondary"> VIEW IMAGE</button>
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="gallery-item">
+                <div class="sp-fb">
+                  <div class="wrk_sp wrk_01">
+                    <div class="wrk_img">
+                      <img src=" ./img/banner/b_img02.jpg" alt="banner">
+                    </div>
+                    <div class="wrk_txt-sp">
+                      <p class="wrk-txt">
+                        スクール課題の仮想バナーです。<br>
+                        旅行会社の紹介バナーです。<br>
+                        制作時間：４時間
+                      </p>
+                      <p class="img-btn">
+                        <a href="./img/banner/b_img02.jpg" @click.prevent="zoom" class="gallery-img">
+                          <button type="button" class="work_btn btn btn-outline-secondary"> VIEW IMAGE</button>
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="gallery-item">
+                <div class="sp-fb">
+                  <div class="wrk_sp wrk_01">
+                    <div class="wrk_img">
+                      <img src=" ./img/banner/b_img01.jpg" alt="banner">
+                    </div>
+                    <div class="wrk_txt-sp">
+                      <p class="wrk-txt">
+                        スクール課題の仮想バナーです。<br>
+                        旅行会社の紹介バナーです。<br>
+                        制作時間：４時間
+                      </p>
+                      <p class="img-btn">
+                        <a href="./img/banner/b_img01.jpg" @click.prevent="zoom" class="gallery-img">
+                          <button type="button" class="work_btn btn btn-outline-secondary"> VIEW IMAGE</button>
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <!-- モーダル画像 -->
+              <transition name="fade">
+                <div class="bg" @click.self="close" v-show="isShow">
+                  <transition name="slide" @after-leave="afterLeave">
+                    <div class="modal" v-show="isShow">
+                      <button class="modal-btn" @click="close">
+                        <i class="fas fa-times"></i>
+                      </button>
+                      <img :src="src" @click.self="close" alt="">
+                    </div>
+                  </transition>
+                </div>
+              </transition>
+            </ul>
+          </div>
+      </section>
+      <!-- ABOUT --------------------------------------->
+      <section class="about" id="about">
+        <div class="about-main">
+          <h2 class="ttl">ABOUT</h2>
+          <ul class="txt about_figure">
+            <li>
+              <!-- プロフィール ---------->
+              <div class="about_figure_item">
+                <img src="./img/me.png" alt="me" class="me">
+                <h3 class="about-subttl">ー　プロフィール　ー</h3>
+                <p class="about_txt"> 名前：Kyurina(キュリナ)　37歳<br>
+                  趣味：ゲーム・DIY・家庭菜園・年に一度の山手線一周<br>
+                  特技：空手<br>
+                  空手は現在1級、近々昇段審査予定。<br>
+                  限られた知識ではありますが、一緒に練習している子供達にも教えていて将来は大会の審判をやりたいです。<br>
+                </p>
+              </div>
+            </li>
+            <!-- 経歴 --------------->
+            <li class="about_figure_txt">
+              <h3>ー　「縁の下の力持ち」を極めたい　ー</h3>
+              <p class="about_txt">
+                私は新卒から10年間社内SE、現在の業務もインフラの関係の業務に従事しており、人の見えない所で色々と支える「縁の下の力持ち」的な立ち位置で業務に取り組んでいます。<br><br>
+                インフラエンジニアは困っている人をアドバイスや助言ができる立場であり、WEBデザイナーも制作したデザインやコーディング等でクライアントを陰で支え成功に導いていく。<br>
+                そんなたくさんの人々の問題を解決できる様なWEBデザイナーになりたいです。<br><br>
+                デザイン・コーディングはもちろん両方勉強しておりますが、特にコーディングに力を入れており、どのように見易く、分かりやすいコーディングをすればいいのか日々楽しみながら勉強しております。
+              </p>
+              <h3>ー　経歴　ー</h3>
+              <div class="about_fb">
+                <p class="about_txt_year">2004年</p>
+                <p class="about_txt">社内SEとして従事。<br>
+                  担当：サーバーの運用・保守。社内報表紙のデザイン・自社のHP・ポスターの作成等。 </p>
+              </div>
+              <div class="about_fb">
+                <p class="about_txt_year">2016年</p>
+                <p class="about_txt">建築会社に従事<br>
+                  担当：経費計算(積算)。7億円の仕事を獲得。</p>
+              </div>
+              <div class="about_fb">
+                <p class="about_txt_year">2018年</p>
+                <p class="about_txt">SESとして従事。 <br>
+                  担当：サーバーの運用・保守、ドキュメント作成。
+                </p>
+              </div>
+              <div class="about_fb">
+                <p class="about_txt_year">2020年</p>
+                <p class="about_txt">2月にデジタルハリウッドbyLIGに通いWEBデザイン専攻にて基礎を学ぶ。 <br>
+                  同年10月スクールを卒業。
+                </p>
+              </div>
+            </li>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- SKILL --------------------------------------->
+      <section class="skill" id="skill">
+        <div class="skill-main">
+          <h2 class="ttl">SKILL</h2>
+          <ul class="skl-fb ">
+            <li>
+              <div class="hc fb">
+                <div> <img src="./img/skill/hc.png" class="img" alt="hc"> </div>
+                <div class="skl-box"> <span class="skl-ttl"> HTML5/CSS3</span> <br>
+                  <span class="skl-txt">レスポンシブや基本的なコーディングは問題ありません。使用エディタはVisual Studio CodeかDreamweaverです。</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="js fb">
+                <div> <img src="./img/skill/js.png" alt="js"> </div>
+                <div class="skl-box"> <span class="skl-ttl">Javascript/jQuery/Vue</span> <br>
+                  <span class="skl-txt">複雑なコードは書くことはできませんが、ライブラリの実装や基本的なコードは書けます。</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="skl-fb2">
+                <div class="ps fb">
+                  <div> <img src="./img/skill/ps.png" alt="ps"> </div>
+                  <div class="skl-box"> <span class="skl-ttl">Photoshop</span> <br>
+                    <span class="skl-txt">デザイン制作では主にPhotoshopを使用しています。基本機能は問題なく使えます。</span>
+                  </div>
+                </div>
+            </li>
+            <li>
+              <div class="ai fb">
+                <div> <img src="./img/skill/ai.png" alt="ai"> </div>
+                <div class="skl-box"> <span class="skl-ttl">Illustrator</span><br>
+                  <span class="skl-txt">Ps同様によく使用します。ベジェ曲線は苦手ですが、基本機能は使えます。</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="skl-fb3">
+                <div class="xd fb">
+                  <div> <img src="./img/skill/xd.png" alt="xd"> </div>
+                  <div class="skl-box"> <span class="skl-ttl">Xd</span><br>
+                    <span class="skl-txt">勉強中ではありますが、Psと使い分けています。<br>
+                      基本的な機能は使えます。</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="wp fb">
+                <div> <img src="./img/skill/wp.png" alt="wp"> </div>
+                <div class="skl-box"> <span class="skl-ttl">WordPress</span><br>
+                  <span class="skl-txt">サーバーへのインストール&は可能です。プラグイン作成までは踏み込めていませんが、テーマの作成は１つの目標にしております。</span>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <!-- footer  CONTACT ------------------------------------->
+    <footer class="contact" id="contact">
+      <div class="contact-main">
+        <h2 class="ttl">CONTACT</h2>
+        <p class="cont-txt">お問い合わせは、以下よりお願いいたします。<br>
+          <br>
+          p98hgf4354sy@gmail.com <br>
+          <br>
+          最後までご覧頂きありがとうございました。
+        </p>
+        <br>
+        <br>
+        <div class="qr"> <img src="./img/QR_631409.png" alt="qr"><br>
+          スマホ用サイトQRコード </div>
+        <small> Copyright©Kyurina Studio. All Rights Reserved. </small>
+      </div>
+    </footer>
+  </div>
+  <!-- js読み込み  ------------------------------------->
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+  <script src="js/vue.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

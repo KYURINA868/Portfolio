@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>PortFolio</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+    integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+  <!-- メイン ------------------------------------------->
+  <main class="main-container">
+    <p class="ttl">飲食店(ラーメン)の仮想サイト</p>
+    <div class="s-fb">
+      <div class="s-img">
+        <img src="./img/insyoku.jpg" alt="insyoku"><br>
+        <img src="./img/QR_375530.png" alt="insyoku" class="qr">
+        <br>
+        <span class="txt qr">スマホ用QRコード</span>
+      </div>
+      <div class="txt-container">
+        <div class="gaiyou">
+          <p class="subttl">概要</p>
+          <span class="txt">
+            2020年よりコロナの影響から飲食業界の状況が大きく変わり
+            既存の営業方法では新規はおろか既存の顧客の存続も危うい。
+            この為、ターゲティング・ターゲットに合わせた訴求が必要と判断。
+            コロナ渦による状況の変化を取り組んだサイト制作を行う。
+          </span>
+        </div>
+        <div class="persona">
+          <p class="subttl">ペルソナ</p>
+          <img src="./img/persona.jpg" alt="" class="p-img"><br>
+          <span class="p-name">樫村雄二さん(42)</span><br>
+          <span class="txt">・男性<br>
+            ・生年月日：S53.5.2<br>
+            ・住所・勤務地：東京江東区<br>
+            ・年商100億円ほどのIT企業社員<br>
+            　〇〇株式会社　営業第2課課長<br>
+            　課内の部下は6人、同課の係長を3年経験後、課長に昇進。<br>
+            　現在に至る。<br>
+            ・家族構成：妻42歳、息子10歳、娘6歳<br>
+            ・夫の収入では生活不十分である為、妻はパートに出ている<br>
+            ・夫の年収は450万程度、妻は100万程度（扶養内で働く）<br>
+            　手取り（夫）： 300,000<br>
+            　手取り（妻）： 80,000<br>
+            <br>
+            <dl id="utiwake">
+              <dt>夫の収入内訳</dt>
+              <dd>
+                　住宅費　　　： 80,000<br>
+                　食費　　　　： 75,000<br>
+                　光熱費　　　： 20,000<br>
+                　通信費　　　： 20,000<br>
+                　日用品　　　： 15,000<br>
+                　衣類代　　　： 20,000<br>
+                　保険　　　　： 15,000<br>
+                　自動車維持費： 20,000<br>
+                　教育費　　　： 15,000<br>
+                　夫の小遣い　： 40,000<br>
+                　貯金　　　　： 30,000<br>
+                　その他雑費　： 30,000
+              </dd>
+            </dl>
+            <br>
+            ・課長に昇進した際に35年ローンのマイホームを購入。<br>
+            　その為、給料は返済に回している。<br>
+            ・夫の小遣いは昼食代含め月４万円程度<br>
+            ・デスクワークが中心であり、最近太り気味。在宅ワークは行わない。<br>
+            ・月２回ほどの草野球を行っていたが、コロナ禍により中止。<br>
+            ・ごはんは妻が健康を意識してヘルシー料理志向になった<br>
+            ・昨今のコロナ渦により衛生面には気を付けている（子供もいるため）<br>
+            ・お店選びは次の４つ<br>
+            　①衛生面を徹底している<br>
+            　②コスパの良さ<br>
+            　③アクセスが良い<br>
+            　④料理がおいしい<br>
+          </span><br>
+          <p class="txt">ペルソナ作成のロジックは下記</p>
+          <a href="./persona/index.html" class="txt p-txt">ペルソナ作成までの道のり</a>
+        </div>
+        <div class="userflow">
+          <p class="subttl">ユーザーフロー</p>
+          <p class="txt">
+            ユーザーが来店するまでのフローを下記と仮定する<br>
+            <br>
+            ・サイトに訪れるきっかけは<br>
+            衛生面（コロナ対策）と目的の料理の確認<br>
+            <br>
+            ・お店に訪れるきっかけは<br>
+            家族連れにも安心安全に食事ができる空間<br>
+            <br>
+            ・シーン<br>
+            家族内の会話で子供がラーメンを食べたいとねだる<br>
+            妻が野菜有りのラーメンで！と追加注文<br>
+            <br>
+            ・状態<br>
+            スマートフォンでお店を検索<br>
+            <br>
+            ・導線<br>
+            ①Googleで「江東区　野菜ラーメン」で検索<br>
+            ②検索で出てきた食べログをクリック。<br>
+            ※Rettyが検索で一番最初に表示されたが、感染対策等が表示されてない為、選択肢から外した。<br>
+            ③何となく良さそうなお店を見つけ「感染症対策」と表示されているが、雰囲気や特徴が掴めないのでサイトに飛ぶ。<br>
+            ④感染症対策等のページもあり目的のラーメンも有りそうなのでここへ行く。<br>
+          <div class="contents">
+            <p class="subttl">コンテンツアイデア</p>
+            <img src="./img/g/idea.jpg" alt=""><br><br>
+            <p class="txt">
+              上記により、優先度の高い【衛生面】【店内の様子】【メニューの表示】<br>
+              また優先度は中ではあるが、お得感を表す【サービス】のクーポンやテイクアウトをトップに表示する。
+
+          </div>
+          <div class="design">
+            <p class="subttl">デザインアイデア</p>
+            <p class="subttl">情報設計</p>
+            <p class="txt">
+              ・店内の雰囲気をイメージできるような写真を入れる<br>
+              ・「お知らせ」の欄を設け随時お店の状況を更新している事を伝える<br>
+              ・「お知らせ」欄に「コロナ対策」の欄を設け、コロナ対策用の別ページにて情報を伝える<br>
+              ・表示する情報　→　「お知らせ」「おしながき」「こだわり」「お問合せ」<br>
+              ・コロナ対策の他、テイクアウト等の情報もお知らせ欄に載せて店内対策以外のサービスも対応している事を知らせる<br>
+            </p>
+            <p class="subttl">デザイン</p>
+            <p class="txt">
+              ・ラーメン店であるので商品のラーメンの写真をトップに入れる<br>
+              ・ペルソナには衛生面とメニューの確認を中心に理解してもらうことが目的の為、他の情報も含めて閲覧したい場合は画像等をクリックできるように表示する<br>
+              ・TOPは文字情報の9割はお知らせのみ表示し、他の情報は画像から入るようにした<br>
+              ・お知らせは「コロナ対策ページ」を「新着情報」のすぐ上に配置し目立つ色にして設ける<br>
+              ・「メニュー」については各ラーメンの写真を載せ、サイドメニューも画像、ドリンクメニューは文字情報にした<br>
+              ・「こだわり」についてはスタッフのこだわり等を写真と文字情報を載せる<br>
+              ・カラーは、ベースはシンプルな白、アクセントカラーとしてコロナに負けない強い意志という意味合いで黒、コロナ対策の部分は警告として赤を使用<br>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 前のページに戻るボタン ------------>
+    <button onclick="location.href='javascript:history.go(-1)'" type="button" class="btn btn-outline-secondary">
+      前のページに戻る</button>
+
+  </main>
+  <!-- TOPに戻るボタン ------------------------------------->
+  <div id="page_top">
+    <a href="#"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+  </div>
+
+  <!-- js読み込み ------------------------------------->
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+  <script src="./js/script.js"></script>
+</body>
+
+</html>
